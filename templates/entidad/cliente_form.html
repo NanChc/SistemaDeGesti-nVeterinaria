@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block titulo_pagina %} Alta cliente {% endblock %}
+{% block titulo_principal %} Formulario CLIENTE {% endblock %}
+{% block titulo_secundario %} Datos a completar o modificar {% endblock %}
+{% block principal %}
+     <form method="post" class="reveal ficha rounded-xl shadow-sm p-7 lg:sticky lg:top-24" novalidate>
+          <h3 id="form-title" class="font-display text-xl font-semibold text-pino">Nueva ficha</h3>
+          <p id="form-feedback" class="hidden mt-2 text-sm font-medium text-pino" role="status" aria-live="polite"></p>
+          <div class="mt-5 space-y-4">
+               <div>
+                    <label for="f-nombre" class="block text-s font-semibold text-pino/70 uppercase tracking-wide">
+                         {% csrf_token %}
+                         {{ form.as_p }}</label>
+                    <div>
+                         <div class="mt-9 flex flex-wrap gap-4">
+                              <input type="submit" value="Grabar" class="inline-flex items-center gap-2 bg-terracotadk text-white font-semibold px-6 py-3.5 rounded-full hover:bg-terracota transition-colors">
+                              <a href='http://127.0.0.1:8000/' class="inline-flex items-center gap-2 bg-terracotadk text-white font-semibold px-6 py-3.5 rounded-full hover:bg-terracota transition-colors">
+                                   Principal
+                              </a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </form>
+
+
+     <!--  <form method="post">
+            {% csrf_token %} 
+            {{ form.as_p }}
+            <input type="submit" value="Grabar" class="btn btn-success">
+            <a href='http://127.0.0.1:8000/' class="btn btn-success">Principal</a>
+       </form>-->
+{% endblock %}

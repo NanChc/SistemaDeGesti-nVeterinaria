@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo_pagina %} Listado de clientes {% endblock %}
+{% block titulo_principal %} Listado de clientes {% endblock %}
+{% block principal %}
+        <table class="w-full bg-white rounded overflow-hidden">
+            <thead class="bg-green-800 text-white">
+                <tr>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Direccion</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            {% for cliente in clientes %}
+                <tr class="text-center border-b bg-crema">
+                    <td>{{ cliente.DNI }}</td>
+                    <td>{{ cliente.nombre }}</td>
+                    <td>{{ cliente.apellido }}</td>
+                    <td>{{ cliente.direccion }}</td>
+                    <td><a href='{% url "modificar_cliente" cliente.id %}'><img src="{% static 'img/ImageEditar.png' %}" class="block mx-auto w-5"></a></td> 
+                    <td><a href='{% url "eliminar_cliente" cliente.id %}'><img src="{% static 'img/ImageEliminar.png' %}" class="block mx-auto w-5"></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <div>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href='http://127.0.0.1:8000/' class="inline-flex items-center gap-2 bg-green-800 text-white font-semibold px-6 py-3.5 rounded-full hover:bg-green-600 transition-colors">
+              Principal
+              <!--<svg class="w-4 h-4" aria-hidden="true"><use href="#i-arrow"/></svg> -->
+            </a>
+          </div>
+        </div>
+        <!--<a href='http://127.0.0.1:8000/' class="btn btn-success">Principal</a> -->
+{% endblock %}

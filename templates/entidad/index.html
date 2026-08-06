@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block titulo_pagina %} Sistema {% endblock %}
+{% block titulo_principal %} Sitema de Gestion {% endblock %}
+{% block principal %}
+
+  <!-- Contenido principal 
+  <main class="container my-5">-->
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-2 gap-4">
+
+      <!-- Tarjeta Clientes -->
+      <div class="border-2 border-pino rounded-xl">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title text-xl font-bold text-gray-800 mb-2">Clientes</h5>
+            <p class="card-text">Gestión de propietarios, datos personales.</p>
+            <a href="clientes" class="inline-flex items-center gap-2 bg-green-800 text-white font-semibold px-4 py-1.5 rounded-full hover:bg-green-600 transition-colors">Entrar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Mascotas -->
+      <div class="border-2 border-terracota rounded-xl">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title text-xl font-bold text-gray-800 mb-2">Mascotas</h5>
+            <p class="card-text">Registro de pacientes, historial clínico y vacunas.</p>
+            <a href="animales" class="inline-flex items-center gap-2 bg-terracota text-white font-semibold px-4 py-1.5 rounded-full hover:bg-terracotadk transition-colors">Entrar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Altas -->
+      <div class="border-2 border-pino rounded-xl">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title  text-xl font-bold text-gray-800 mb-2">Altas</h5>
+            <p class="card-text ">Registrar nuevos clientes o mascotas en el sistema.</p>
+            <a href="nuevo_cliente" class="inline-flex items-center gap-2 bg-green-800 text-white font-semibold px-4 py-1.5 rounded-full hover:bg-green-600 transition-colors">Cliente</a>
+            <a href="nuevo_animal" class="inline-flex items-center gap-2 bg-green-800 text-white font-semibold px-4 py-1.5 rounded-full hover:bg-green-600 transition-colors">Mascota</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Modificación -->
+      <div class="border-2 border-terracota rounded-xl">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title  text-xl font-bold text-gray-800 mb-2">Modificación</h5>
+            <p class="card-text">Actualizar o editar registros existentes.</p>
+            <a href="clientes" class="inline-flex items-center gap-2 bg-terracota text-white font-semibold px-4 py-1.5 rounded-full hover:bg-terracotadk transition-colors">Clientes</a>
+            <a href="animales" class="inline-flex items-center gap-2 bg-terracota text-white font-semibold px-4 py-1.5 rounded-full hover:bg-terracotadk transition-colors">Animales</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+{% endblock %}
