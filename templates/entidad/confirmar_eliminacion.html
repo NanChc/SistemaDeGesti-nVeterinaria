@@ -3,29 +3,15 @@
 {% block titulo_pagina %} Eliminar registro {% endblock %}
 {% block titulo_principal %} Confirmar {% endblock %}
 {% block principal %}
-    <form method="post" class="reveal ficha rounded-xl shadow-sm p-7 lg:sticky lg:top-24 bg-terracota" novalidate>
-        {% csrf_token %}
-        <h4>¿Esta seguro que desea eliminar {{ objeto }}: {{ dato }}?</h4>
-        <br>
-        <div>
-            <div class="mt-9 flex flex-wrap gap-4">
-                <input type="submit" value="Confirmar" class="inline-flex items-center gap-2 bg-terracotadk text-white font-semibold px-6 py-3.5 rounded-full hover:bg-terracota transition-colors">
-                    <a href='http://127.0.0.1:8000/' class="inline-flex items-center gap-2 bg-green-800 text-white font-semibold px-6 py-3.5 rounded-full hover:bg-green-600 transition-colors">
-                        Principal
-                    </a>
-            </div>
-        </div>
-        <!--<input type="submit" value="Confirmar" class="btn btn-success">
-         <input type="text" class="btn btn-outline-primary"> -->
-    </form>
-
-    <!-- 
-    <form method="post">
+    <form method="post" class="ficha rounded-xl shadow-sm p-7 lg:sticky lg:top-24 bg-terracota" novalidate>
         {% csrf_token %}
         <h4>¿Esta seguro que desea eliminar {{ objeto }} : {{ dato }}?</h4>
         <br>
-        <input type="submit" value="Confirmar" class="btn btn-success">
-         <input type="text" class="btn btn-outline-primary"> 
-    </form>-->
+        <div class="mt-9 flex flex-wrap gap-4">
+            <input type="submit" value="Confirmar" class="inline-flex items-center gap-2 bg-terracotadk text-white font-semibold px-6 py-3.5 rounded-full hover:bg-terracota transition-colors">
+            <!-- <input type="text" class="btn btn-outline-primary">--> 
+             <a href='http://127.0.0.1:8000/' class="inline-flex items-center gap-2 bg-green-800 text-white font-semibold px-6 py-3.5 rounded-full hover:bg-green-600 transition-colors">Principal</a>
+         </div>
+    </form>
 
 {% endblock %}
