@@ -26,9 +26,9 @@ Sitio web completo para una clínica veterinaria, con frontend estático y un si
 
 | Capa | Tecnología |
 |---|---|
-| Frontend | HTML5, Tailwind CSS (CDN), JavaScript vanilla |
+| Frontend | HTML5, Tailwind CSS |
 | Backend | Python, Django |
-| Base de datos | SQLite (desarrollo) |
+| Base de datos | SQLite |
 | Control de versiones | Git / GitHub |
 
 ---
@@ -38,7 +38,7 @@ Sitio web completo para una clínica veterinaria, con frontend estático y un si
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/huellas-veterinaria.git
+git clone https://github.com/huellas-veterinaria.git
 cd huellas-veterinaria
 ```
 
