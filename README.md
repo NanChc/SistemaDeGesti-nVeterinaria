@@ -76,16 +76,6 @@ Abrí el navegador en [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## 📦 Generar `requirements.txt`
-
-Si todavía no lo tenés, podés generarlo con:
-
-```bash
-pip freeze > requirements.txt
-```
-
----
-
 ## 👩‍💻 Autora
 
 **Nancy** — Desarrolladora Full Stack  
